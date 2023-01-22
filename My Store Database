@@ -1,0 +1,28 @@
+--create a store database
+
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, product TEXT);
+
+INSERT INTO my_store VALUES (1, "water", 15, 2, "beverage");
+INSERT INTO my_store VALUES (2, "Snickers", 15, 3, "candy");
+INSERT INTO my_store VALUES (3, "graphic t-shirt", 10, 15, "clothing");
+INSERT INTO my_store VALUES (4, "black jeans", 9, 20, "clothing");
+INSERT INTO my_store VALUES (5, "blue jeans", 8, 20, "clothing");
+INSERT INTO my_store VALUES (6, "black sneakers", 11, 25, "clothing");
+INSERT INTO my_store VALUES (7, "white sneakers", 15, 25, "clothing");
+INSERT INTO my_store VALUES (8, "Monster", 15, 4, "beverage");
+INSERT INTO my_store VALUES (9, "Soda", 20, 3, "beverage");
+INSERT INTO my_store VALUES (10, "Gatorade", 25, 3, "beverage");
+INSERT INTO my_store VALUES (11, "hats", 14, 10, "clothing");
+INSERT INTO my_store VALUES (12, "stuffed animals", 10, 5, "toys");
+INSERT INTO my_store VALUES (13, "funko pops", 25, 15, "toys");
+INSERT INTO my_store VALUES (14, "iphone charger", 8, 15, "electronics");
+INSERT INTO my_store VALUES (15, "android charger", 7, 15, "beverage");
+
+-- display order by price
+
+SELECT * FROM my_store 
+ORDER BY price DESC;
+
+-- display items less than $15
+
+SELECT * FROM my_store WHERE price < 15;
