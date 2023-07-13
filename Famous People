@@ -1,0 +1,46 @@
+CREATE TABLE Celebs (
+    id INTEGER PRIMARY KEY,
+    Fullname TEXT,
+    Career_id INTEGER
+    );
+/* Celebrities */
+
+INSERT INTO Celebs VALUES (1, "Johhny Depp", 2);
+INSERT INTO Celebs VALUES (2, "Kevin Hart",3);
+INSERT INTO Celebs VALUES (3, "Barry White", 1);
+INSERT INTO Celebs VALUES (4, "RL Grime", 5);
+INSERT INTO Celebs VALUES (5, "Tom Hanks", 2);
+INSERT INTO Celebs VALUES (6, "Trevor Noah", 3);
+INSERT INTO Celebs VALUES (7, "Anna Kendrick", 2);
+INSERT INTO Celebs VALUES (8, "Theo Van",3);
+INSERT INTO Celebs VALUES (9, "Nate Bargatze",3);
+INSERT INTO Celebs VALUES (10, "Dave Chapelle",3);
+INSERT INTO Celebs VALUES (11, "Mariah Carey", 1);
+INSERT INTO Celebs VALUES (12, "Madonna", 1);
+INSERT INTO Celebs VALUES (13, "Ed Sheeran", 1);
+INSERT INTO Celebs VALUES (14, "Matt Bellamy", 1);
+INSERT INTO Celebs VALUES (15, "Leonardo DiCaprio",2);
+INSERT INTO Celebs VALUES (16, "Diplo", 5);
+INSERT INTO Celebs VALUES (17, "Skrillex", 5);
+INSERT INTO Celebs VALUES (18, "MEMBA", 5);
+INSERT INTO Celebs VALUES (19, "Will Ferrell", 2);
+INSERT INTO Celebs VALUES (20, "Imanu", 5);
+
+CREATE TABLE Occupations (
+    id INTEGER PRIMARY KEY,
+    Job TEXT
+    );
+
+/* Careers */
+
+INSERT INTO Occupations VALUES (1, "Singer");
+INSERT INTO Occupations VALUES (2, "Actor");
+INSERT INTO Occupations VALUES (3, "Comedian");
+INSERT INTO Occupations VALUES (5, "DJ");
+
+
+    
+SELECT Fullname, Job
+    FROM Celebs
+    LEFT OUTER JOIN Occupations
+    ON Celebs.Career_id  = Occupations.id
